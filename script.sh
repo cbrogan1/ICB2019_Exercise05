@@ -1,6 +1,6 @@
 #usage: bash script2.sh wages.csv
 
-cat $1 | cut -d , -f 1,2 | tr ',' ' ' | sort -t ' ' -k1,1 -k2,2 -n > $1_sorted3.txt
+cat $1 | cut -d , -f 1,2 | tr ',' ' ' | sort -t ' ' -k1,1 -k2,2 -n > $1_sorted.txt
 
 echo "highest earner"
 cat $1 | grep -v 'gender' | sort -t , -k 4 -n | tail -n 1
